@@ -1,4 +1,4 @@
-const bookstore = {
+export const bookstore = {
   inventory: [
     { title: "JavaScript Basics", price: 29.99, quantity: 5 },
     { title: "Python for Beginners", price: 24.99, quantity: 0 },
@@ -16,3 +16,5 @@ const bookstore = {
     { customer: "Ivy", bookTitle: "Data Structures 101", orderDate: "2024-01-03" },
   ]
 }
+
+
