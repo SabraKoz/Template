@@ -13,7 +13,6 @@ Note: Define the algorithm with comments, and then implement each step with code
 */
 
 
-//console.log a message saying if the order has been placed or not
 
 import { bookstore } from "./database.js"
 
@@ -40,14 +39,16 @@ const fulfillBookOrder = (booksInInventory, pendingOrders, titleOfBook) => {
                 if (book.title === titleOfBook) {
                     //check quantity of book in inventory to see if there are enough (quantity > 0)
                     if (book.quantity > 0) {
-
+                        
                         book.quantity -= 1
+                        console.log(book.quantity)
                     } else {
                         return console.log(`We do not have ${titleOfBook} in inventory at this time.`)
                     }
                 }
             }
         }
+        //console.log a message saying if the order has been placed or not
     } console.log(`${titleOfBook} has been ordered, thank you!`)
 }
 fulfillBookOrder(bookstore.inventory, bookstore.orders, "JavaScript Basics")
